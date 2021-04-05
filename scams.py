@@ -1,0 +1,102 @@
+import requests
+import os
+import logging
+import random
+import string
+# import json
+# import grequests
+
+from colored import fore, back, style
+
+from colorama import Fore, Back, Style
+
+chars = string.ascii_letters + string.digits + '!@#$%^&*()'
+random.seed = (os.urandom(1024))
+
+from colorama import init
+init()
+from colorama import Fore, Back, Style
+
+# print("What is the scammer's URl?")
+
+# urlInput = input("What is the scammer's URL?: ")
+# url = 'https://'+urlInput
+
+print(Fore.RED + "[SP]" + Fore.CYAN + ' What is the scam URL?: ' + Style.RESET_ALL, end="")
+urlInput = input()
+url = 'https://'+urlInput
+
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
+
+request = requests.get(url, headers=headers)
+if request.status_code == 400:
+    print('This website does not exist bruh')
+# url = urlInput
+# print(url)
+
+# from gevent import monkey; monkey.patch_all()
+
+
+# print(fore.GREEN + "What is the scammer's URL???: ", end='')
+# urlInput = input()
+# url = 'https://'+urlInput
+# print(url)
+
+# urlInput = "{url}"
+
+# ==========================================================================================================
+
+# usernameInput = input("What is the log in information?: ")
+# print(usernameInput)
+print(Fore.RED + "[SP]" + Fore.CYAN + ' What is the login Form Data?: ' + Style.RESET_ALL, end="")
+usernameInput = input()
+# print(usernameInput)
+
+
+# ==========================================================================================================
+
+# passwordInput = input("What is the password information?: ")
+print(Fore.RED + "[SP]" + Fore.CYAN + ' What is the password Form Data?: ' + Style.RESET_ALL, end="")
+passwordInput = input()
+# print(passwordInput)
+# print(passwordInput)
+
+# ==========================================================================================================
+
+print(Fore.RED + "[SP]" + Fore.CYAN + ' How many requests do you want to make?: ' + Style.RESET_ALL, end="")
+requestInput = input()
+
+urls = [url, url, url]
+
+# from gevent.pool import Pool
+# p = Pool(10)
+
+
+# print(requestInput)
+
+# requestInput = input("How many requests do you want to send to the website?: ")
+# print(requestInput)
+# rangeInput = range(requestInput)
+
+name_extra = ''.join(random.choice(string.digits))
+
+username = 'kingsman' + name_extra + '@yahoo.com'
+password = ''.join(random.choice(chars) for i in range(8))
+
+# requests.post(url, allow_redirects=False, data={
+#	'{usernameInput}': username,
+# 	'{passwordInput}': password
+# })
+
+for i in range(100): # Or whatever amount of requests you wish to send
+    requests.post(url, allow_redirects=False, data={
+		'{usernameInput}': username,
+		'{passwordInput}': password
+	})
+
+# p.map(requests.post, urls)
+
+# rs = (grequests.get(u) for u in urls)
+# grequests.map(rs)
+
+print('Sending ' + style.BOLD + requestInput + Style.RESET_ALL + ' requests with the Username %s and Password %s' % (username, password))

@@ -6,7 +6,7 @@ import string
 # import json
 # import grequests
 
-from colored import fore, back, style
+# from colored import fore, back, style
 
 from colorama import Fore, Back, Style
 
@@ -16,11 +16,6 @@ random.seed = (os.urandom(1024))
 from colorama import init
 init()
 from colorama import Fore, Back, Style
-
-# print("What is the scammer's URl?")
-
-# urlInput = input("What is the scammer's URL?: ")
-# url = 'https://'+urlInput
 
 print(Fore.RED + "[SP]" + Fore.CYAN + ' What is the scam URL?: ' + Style.RESET_ALL, end="")
 urlInput = input()
@@ -34,7 +29,7 @@ if request.status_code == 400:
 # url = urlInput
 # print(url)
 
-# from gevent import monkey; monkey.patch_all()
+
 
 
 # print(fore.GREEN + "What is the scammer's URL???: ", end='')
@@ -64,7 +59,20 @@ passwordInput = input()
 # ==========================================================================================================
 
 print(Fore.RED + "[SP]" + Fore.CYAN + ' How many requests do you want to make?: ' + Style.RESET_ALL, end="")
+# print(Fore.RED + "[SP]" + Fore.CYAN + ' How many requests do you want to make?: ' + Style.RESET_ALL, end="".isdecimal())
 requestInput = input()
+print(requestInput)
+if requestInput.isdigit() == False:
+    def foo():
+        return print(Fore.ORANGE + "[ERROR]" + Fore.CYAN + 'This is not a number');
+
+#def notnumber(answer):
+#	answer = print(Fore.ORANGE + "[ERROR]" + Fore.CYAN + 'This is not a number')
+#	return answer
+
+# requestInput = input(),
+#if isdigit() == False:
+#    print('Please only enter a number')
 
 urls = [url, url, url]
 
@@ -88,10 +96,10 @@ password = ''.join(random.choice(chars) for i in range(8))
 # 	'{passwordInput}': password
 # })
 
-for i in range(100): # Or whatever amount of requests you wish to send
+for i in range(2): # Or whatever amount of requests you wish to send
     requests.post(url, allow_redirects=False, data={
-		'{usernameInput}': username,
-		'{passwordInput}': password
+		usernameInput: username,
+		passwordInput: password
 	})
 
 # p.map(requests.post, urls)

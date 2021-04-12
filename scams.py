@@ -77,9 +77,7 @@ print(requestInput)
 # print(requestInput)
 # rangeInput = range(requestInput)
 
-name_extra = ''.join(random.choice(string.digits))
 
-username = 'kingsman' + name_extra + '@yahoo.com'
 # password = ''.join(random.choice(chars) for i in range(8))
 
 # requests.post(url, allow_redirects=False, data={
@@ -94,6 +92,10 @@ username = 'kingsman' + name_extra + '@yahoo.com'
 #    url = (main+ending)
 #    print(url)
 
+name_extra = ''.join(random.choice(string.digits))
+
+username = 'kingsman' + name_extra + '@yahoo.com'
+
 for i in range(requestInput):
     for i in range(random.randint(19,19)):
 
@@ -101,6 +103,7 @@ for i in range(requestInput):
         password = ""
         password = ''.join(random.choice(chars) for i in range(8)) # Or whatever amount of requests you wish to send
         name_extra = ''.join(random.choice(string.digits))
+        names = json.loads(open('names.json').read())
         username = 'kingsman' + name_extra + '@yahoo.com'
 
     requests.post(url, allow_redirects=False, data={

@@ -5,6 +5,9 @@ import random
 import string
 import json
 
+import ctypes
+ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring URL...")
+
 from colored import fore, back, style
 
 from colorama import Fore, Back, Style
@@ -28,21 +31,39 @@ if request.status_code == 400:
 
 # ==========================================================================================================
 
+import ctypes
+ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring Login...")
+
 print(Fore.RED + "[SP]" + Fore.CYAN + ' What is the login Form Data?: ' + Style.RESET_ALL, end="")
 usernameInput = input()
 
 
 # ==========================================================================================================
 
+import ctypes
+ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring Password...")
+
+
 print(Fore.RED + "[SP]" + Fore.CYAN + ' What is the password Form Data?: ' + Style.RESET_ALL, end="")
 passwordInput = input()
 
 # ==========================================================================================================
 
-requestInput = int(input(f"{Fore.RED}[SP] {Fore.CYAN}How many requests do you want to make?: {Style.RESET_ALL}"))
-print(requestInput)
+import ctypes
+ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring Requests...")
+
+
+#requestInput = int(input(f"{Fore.RED}[SP] {Fore.CYAN}How many requests do you want to make?: {Style.RESET_ALL}"))
+#print(requestInput)
+
+print(Fore.RED + "[SP]" + Fore.CYAN + ' How many request do you want to send?: ' + Style.RESET_ALL, end="")
+requestInput = int(input())
 
 # ==========================================================================================================
+
+import ctypes
+ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring Proxy...")
+
 
 print(Fore.RED + "[SP]" + Fore.CYAN + ' Would you like to use a Proxy?: ' + Style.RESET_ALL, end="")
 proxyInput = input()
@@ -52,6 +73,19 @@ if "yes" in proxyInput or "no" in proxyInput:
 else:
     print(f"{Fore.WHITE}[ {Fore.RED}! {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Answer must be {Fore.WHITE}yes {Fore.LIGHTBLACK_EX}or {Fore.WHITE}no")
     exit()
+
+#if proxyInput == "yes":
+    scrapep = input(f"{Fore.WHITE}[ {Fore.YELLOW}> {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Auto proxy scrape {Fore.WHITE}(yes or no){Fore.LIGHTBLACK_EX}: {Fore.WHITE}")
+    print(f"\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}If no, every check will be on random proxy.")
+    mult = input(f"{Fore.WHITE}[ {Fore.YELLOW}> {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Multiple checks for proxy {Fore.WHITE}(yes or no){Fore.LIGHTBLACK_EX}: {Fore.WHITE}")
+#else:
+    print(f"\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}If true, before code will be {Fore.WHITE}discord.gift/")
+    prefix = input(f"{Fore.WHITE}[ {Fore.YELLOW}> {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Prefix before codes {Fore.WHITE}(yes or no){Fore.LIGHTBLACK_EX}: {Fore.WHITE}")
+    if "yes" in prefix or "no" in prefix:
+        pass
+    else:
+        print(f"{Fore.WHITE}[ {Fore.RED}! {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Answer must be {Fore.WHITE}yes {Fore.LIGHTBLACK_EX}or {Fore.WHITE}no")
+        exit()
 
 name_extra = ''.join(random.choice(string.digits))
 

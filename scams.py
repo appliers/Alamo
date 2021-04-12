@@ -42,9 +42,20 @@ passwordInput = input()
 requestInput = int(input(f"{Fore.RED}[SP] {Fore.CYAN}How many requests do you want to make?: {Style.RESET_ALL}"))
 print(requestInput)
 
+# ==========================================================================================================
+
+print(Fore.RED + "[SP]" + Fore.CYAN + ' Would you like to use a Proxy?: ' + Style.RESET_ALL, end="")
+proxyInput = input()
+
+if "yes" in proxyInput or "no" in proxyInput:
+    pass
+else:
+    print(f"{Fore.WHITE}[ {Fore.RED}! {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Answer must be {Fore.WHITE}yes {Fore.LIGHTBLACK_EX}or {Fore.WHITE}no")
+    exit()
+
 name_extra = ''.join(random.choice(string.digits))
 
-username = 'kingsman' + name_extra + '@yahoo.com'
+username = 'epicscammer' + name_extra + '@yahoo.com'
 
 for i in range(requestInput):
     for i in range(random.randint(19,19)):

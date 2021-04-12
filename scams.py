@@ -109,7 +109,9 @@ for i in range(requestInput):
 	})
     #for i in range(random.randint(2,2)):
         # print(f"Sending {style.BOLD}{requestInput}{Style.RESET_ALL} requests right now, please wait...")
-    print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {username} and Password {password}")
+    print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
+
+print(f"{Fore.RED}[SP] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
 # p.map(requests.post, urls)
 

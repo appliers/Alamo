@@ -3,10 +3,10 @@ import os
 import logging
 import random
 import string
-# import json
+import json
 # import grequests
 
-# from colored import fore, back, style
+from colored import fore, back, style
 
 from colorama import Fore, Back, Style
 
@@ -58,13 +58,9 @@ passwordInput = input()
 
 # ==========================================================================================================
 
-print(Fore.RED + "[SP]" + Fore.CYAN + ' How many requests do you want to make?: ' + Style.RESET_ALL, end="")
+requestInput = int(input(f"{Fore.RED}[SP] {Fore.CYAN}How many requests do you want to make?: {Style.RESET_ALL}"))
 # print(Fore.RED + "[SP]" + Fore.CYAN + ' How many requests do you want to make?: ' + Style.RESET_ALL, end="".isdecimal())
-requestInput = input()
 print(requestInput)
-if requestInput.isdigit() == False:
-    def foo():
-        return print(Fore.ORANGE + "[ERROR]" + Fore.CYAN + 'This is not a number');
 
 #def notnumber(answer):
 #	answer = print(Fore.ORANGE + "[ERROR]" + Fore.CYAN + 'This is not a number')
@@ -73,11 +69,6 @@ if requestInput.isdigit() == False:
 # requestInput = input(),
 #if isdigit() == False:
 #    print('Please only enter a number')
-
-urls = [url, url, url]
-
-# from gevent.pool import Pool
-# p = Pool(10)
 
 
 # print(requestInput)
@@ -89,22 +80,44 @@ urls = [url, url, url]
 name_extra = ''.join(random.choice(string.digits))
 
 username = 'kingsman' + name_extra + '@yahoo.com'
-password = ''.join(random.choice(chars) for i in range(8))
+# password = ''.join(random.choice(chars) for i in range(8))
 
 # requests.post(url, allow_redirects=False, data={
 #	'{usernameInput}': username,
 # 	'{passwordInput}': password
 # })
 
-for i in range(2): # Or whatever amount of requests you wish to send
+#for i in range(amt):
+#    ending = ""
+#    for i in range(random.randint(19,19)):
+#        ending += random.choice(chars)
+#    url = (main+ending)
+#    print(url)
+
+for i in range(requestInput):
+    for i in range(random.randint(19,19)):
+
+        chars = list(string.ascii_lowercase)+list(string.ascii_uppercase)+list(string.digits)
+        password = ""
+        password = ''.join(random.choice(chars) for i in range(8)) # Or whatever amount of requests you wish to send
+        name_extra = ''.join(random.choice(string.digits))
+        username = 'kingsman' + name_extra + '@yahoo.com'
+
     requests.post(url, allow_redirects=False, data={
-		usernameInput: username,
-		passwordInput: password
+		f"{usernameInput}": username,
+		f"{passwordInput}": password
 	})
+    #for i in range(random.randint(2,2)):
+        # print(f"Sending {style.BOLD}{requestInput}{Style.RESET_ALL} requests right now, please wait...")
+    print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {username} and Password {password}")
 
 # p.map(requests.post, urls)
 
 # rs = (grequests.get(u) for u in urls)
 # grequests.map(rs)
 
-print('Sending ' + style.BOLD + requestInput + Style.RESET_ALL + ' requests with the Username %s and Password %s' % (username, password))
+# Sending ' + Style.BOLD + requestInput + Style.RESET_ALL + ' requests with the Username %s and Password %s' % (username, password
+
+# print(f"Sending {style.BOLD}{requestInput}{Style.RESET_ALL} requests with the Username {username} and Password {password}")
+
+# print('Sending ' + Style.BOLD + requestInput + Style.RESET_ALL + ' requests with the Username %s and Password %s' % (username, password))

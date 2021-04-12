@@ -53,7 +53,6 @@ for i in range(requestInput):
         password = ""
         password = ''.join(random.choice(chars) for i in range(8)) # Or whatever amount of requests you wish to send
         name_extra = ''.join(random.choice(string.digits))
-        names = json.loads(open('names.json').read())
         username = 'kingsman' + name_extra + '@yahoo.com'
 
     requests.post(url, allow_redirects=False, data={

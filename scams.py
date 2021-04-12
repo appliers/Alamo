@@ -74,18 +74,29 @@ else:
     print(f"{Fore.WHITE}[ {Fore.RED}! {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Answer must be {Fore.WHITE}yes {Fore.LIGHTBLACK_EX}or {Fore.WHITE}no")
     exit()
 
-#if proxyInput == "yes":
-    scrapep = input(f"{Fore.WHITE}[ {Fore.YELLOW}> {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Auto proxy scrape {Fore.WHITE}(yes or no){Fore.LIGHTBLACK_EX}: {Fore.WHITE}")
-    print(f"\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}If no, every check will be on random proxy.")
-    mult = input(f"{Fore.WHITE}[ {Fore.YELLOW}> {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Multiple checks for proxy {Fore.WHITE}(yes or no){Fore.LIGHTBLACK_EX}: {Fore.WHITE}")
-#else:
-    print(f"\n{Fore.WHITE}[ {Fore.YELLOW}? {Fore.WHITE}] {Fore.LIGHTBLACK_EX}If true, before code will be {Fore.WHITE}discord.gift/")
-    prefix = input(f"{Fore.WHITE}[ {Fore.YELLOW}> {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Prefix before codes {Fore.WHITE}(yes or no){Fore.LIGHTBLACK_EX}: {Fore.WHITE}")
-    if "yes" in prefix or "no" in prefix:
-        pass
-    else:
-        print(f"{Fore.WHITE}[ {Fore.RED}! {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Answer must be {Fore.WHITE}yes {Fore.LIGHTBLACK_EX}or {Fore.WHITE}no")
-        exit()
+if proxyInput == "yes":
+
+    httpInput = input(f"What is the HTTP proxy?: ")
+    httpsInput = input(f"What is the HTTPS proxy?: ")
+
+    http_proxy  = f"http://{httpInput}"
+    https_proxy = f"https://{httpsInput}"
+
+
+    proxyDict = {
+        "http"  : http_proxy,
+        "https" : https_proxy,
+        }
+
+else:
+        http_proxy  = "http://127.0.0.1"
+        https_proxy = "https://127.0.0.1"
+
+
+        proxyDict = {
+            "http"  : http_proxy,
+            "https" : https_proxy,
+            }
 
 name_extra = ''.join(random.choice(string.digits))
 
@@ -96,9 +107,11 @@ for i in range(requestInput):
         password = ""
         password = ''.join(random.choice(chars) for i in range(8)) # Or whatever amount of requests you wish to send
         name_extra = ''.join(random.choice(string.digits))
-        username = 'Ubhua' + name_extra + '@yahoo.com'
+        username = 'kingsman' + name_extra + '@yahoo.com'
 
-    requests.post(url, allow_redirects=False, data={
+    # headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
+
+    requests.post(url, allow_redirects=False, headers={'User-Agent': 'Chrome'}, proxies=proxyDict, data={
 		f"{usernameInput}": username,
 		f"{passwordInput}": password
 	})

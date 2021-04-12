@@ -89,8 +89,6 @@ else:
 
 name_extra = ''.join(random.choice(string.digits))
 
-username = 'epicscammer' + name_extra + '@yahoo.com'
-
 for i in range(requestInput):
     for i in range(random.randint(19,19)):
 
@@ -98,7 +96,7 @@ for i in range(requestInput):
         password = ""
         password = ''.join(random.choice(chars) for i in range(8)) # Or whatever amount of requests you wish to send
         name_extra = ''.join(random.choice(string.digits))
-        username = 'kingsman' + name_extra + '@yahoo.com'
+        username = 'Ubhua' + name_extra + '@yahoo.com'
 
     requests.post(url, allow_redirects=False, data={
 		f"{usernameInput}": username,

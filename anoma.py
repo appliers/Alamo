@@ -96,7 +96,7 @@ if optionInput == "1":
     ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring Proxy...")
 
 
-    print(Fore.RED + "[Anoma]" + Fore.CYAN + ' Would you like to use a Proxy?: ' + Style.RESET_ALL, end="")
+    print(Fore.RED + "[Anoma]" + Fore.CYAN + ' Would you like to use a Proxy? (Choose "no" unless you want to be spammed with errors): ' + Style.RESET_ALL, end="")
     proxyInput = input()
 
     if "yes" in proxyInput or "no" in proxyInput:

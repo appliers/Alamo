@@ -19,7 +19,7 @@ init()
 from colorama import Fore, Back, Style
 
 import ctypes
-ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Menu")
+ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.1] | Menu")
 
 print(f"\n")
 print(f"{Fore.RED}[Anoma] {Fore.GREEN}Select a number from 1 - 6 to continue{Style.RESET_ALL}")
@@ -39,7 +39,7 @@ else:
 
 if optionInput == "1":
     import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring URL...")
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.1] | Configuring URL...")
 
     print(Fore.RED + "[Anoma]" + Fore.CYAN + ' What is the scam URL?: ' + Style.RESET_ALL, end="")
     urlInput = input()
@@ -63,7 +63,7 @@ if optionInput == "1":
     # ==========================================================================================================
 
     import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring Login...")
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.1] | Configuring Login...")
 
     print(Fore.RED + "[Anoma]" + Fore.CYAN + ' What is the login Form Data?: ' + Style.RESET_ALL, end="")
     usernameInput = input()
@@ -72,7 +72,7 @@ if optionInput == "1":
     # ==========================================================================================================
 
     import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring Password...")
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.1] | Configuring Password...")
 
 
     print(Fore.RED + "[Anoma]" + Fore.CYAN + ' What is the password Form Data?: ' + Style.RESET_ALL, end="")
@@ -81,7 +81,7 @@ if optionInput == "1":
     # ==========================================================================================================
 
     import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring Requests...")
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.1] | Configuring Requests...")
 
 
     #requestInput = int(input(f"{Fore.RED}[SP] {Fore.CYAN}How many requests do you want to make?: {Style.RESET_ALL}"))
@@ -90,10 +90,12 @@ if optionInput == "1":
     print(Fore.RED + "[Anoma]" + Fore.CYAN + ' How many request do you want to send?: ' + Style.RESET_ALL, end="")
     requestInput = int(input())
 
+
+
     # ==========================================================================================================
 
     import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring Proxy...")
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.1] | Configuring Proxy...")
 
 
     print(Fore.RED + "[Anoma]" + Fore.CYAN + ' Would you like to use a Proxy? (Choose "no" unless you want to be spammed with errors): ' + Style.RESET_ALL, end="")
@@ -165,7 +167,7 @@ if optionInput == "1":
 
 if optionInput == "2":
     import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Help")
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.1] | Help")
 
     print(f"{Fore.RED}[Anoma] {Fore.GREEN}What do you need help with? Choose an option below:{Style.RESET_ALL}")
     print(f"[{Fore.GREEN}1{Style.RESET_ALL}] {Fore.CYAN}Starting Anoma{Style.RESET_ALL}")
@@ -177,20 +179,31 @@ if optionInput == "2":
     if "1" in helpInput or "2" in helpInput or "3" in helpInput or "4" in helpInput:
         pass
     else:
-        print(f"{Fore.RED}[Anoma] {Fore.CYAN}Answer must be between 1 - 6")
+        print(f"{Fore.RED}[Anoma] {Fore.CYAN}Answer must be between 1 - 4")
         exit()
+
+    if helpInput == "1":
+        print(f"coming soon")
+
+    if helpInput == "2":
+        print(f"coming soon")
+
+    if helpInput == "3":
+        print(f"coming soon")
+
+    if helpInput == "4":
+        print(f"coming soon")
 
 
 if optionInput == "3":
+    import ctypes
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma ] | Settings")
 
     print(f"Coming Soon...")
 
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Settings")
-
 if optionInput == "4":
     import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Check")
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.1] | Check")
 
     print(f'{Fore.RED}[Anoma] {Fore.CYAN}What website would you like to check? (Do not include "https://" in the URL.):', Style.RESET_ALL, end="")
     checkInput = input()
@@ -225,7 +238,7 @@ if optionInput == "4":
 
 if optionInput == "5":
     print(f"[{Fore.GREEN}Name{Style.RESET_ALL}]: Anoma")
-    print(f"[{Fore.GREEN}Version{Style.RESET_ALL}]: 1.0.0")
+    print(f"[{Fore.GREEN}Version{Style.RESET_ALL}]: 1.0.1")
     print(f"[{Fore.GREEN}Developer{Style.RESET_ALL}]: xKwm1")
     print(f"[{Fore.GREEN}Licence{Style.RESET_ALL}]: Apache License 2.0 (Read here: https://github.com/xkwm1/Anoma/blob/main/LICENSE)")
     print(f"[{Fore.RED}Website{Style.RESET_ALL}]: Coming Soon{Style.RESET_ALL}")
@@ -233,6 +246,6 @@ if optionInput == "5":
     print(f"[{Fore.RED}GitHub{Style.RESET_ALL}]: https://github.com/xkwm1/Anoma{Style.RESET_ALL}")
 
     import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | About")
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.1] | About")
 if optionInput == "6":
     exit();

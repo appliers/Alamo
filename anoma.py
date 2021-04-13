@@ -5,6 +5,7 @@ import random
 import string
 import json
 import sys
+from requests.exceptions import ConnectionError
 
 from colored import fore, back, style
 
@@ -43,6 +44,14 @@ if optionInput == "1":
     print(Fore.RED + "[Anoma]" + Fore.CYAN + ' What is the scam URL?: ' + Style.RESET_ALL, end="")
     urlInput = input()
     url = 'https://'+urlInput
+
+    try:
+        response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
+    except ConnectionError:
+        print(f"{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
+        exit()
+    else:
+        pass
 
     #request = requests.get(f"{url}")
     #if request.status_code == 200:
@@ -187,8 +196,16 @@ if optionInput == "4":
 
     url = 'https://'+checkInput
 
-    response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
-    print(response.headers)
+    #response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
+    #print(response.headers)
+    try:
+        response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
+    except ConnectionError:
+        print(f"{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
+        exit()
+    else:
+        response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
+        print(response.headers)
 
     print(f"{Fore.RED}[Anoma] {Fore.CYAN}Would you like to see the code of {url}?{Style.RESET_ALL}")
     codeInput = input("> ")

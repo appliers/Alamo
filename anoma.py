@@ -30,7 +30,7 @@ print(f"[{Fore.GREEN}5{Style.RESET_ALL}] {Fore.CYAN}About{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}6{Style.RESET_ALL}] {Fore.CYAN}Exit{Style.RESET_ALL}")
 optionInput = input("> ")
 
-if "1" in optionInput or "2" in optionInput or "3" in optionInput or "4" in optionInput or "5" in optionInput or "6" in optionInput :
+if "1" in optionInput or "2" in optionInput or "3" in optionInput or "4" in optionInput or "5" in optionInput or "6" in optionInput:
     pass
 else:
     print(f"{Fore.RED}[Anoma] {Fore.CYAN}Answer must be between 1 - 6")
@@ -158,7 +158,19 @@ if optionInput == "2":
     import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Help")
 
-    print(f"Coming Soon...")
+    print(f"{Fore.RED}[Anoma] {Fore.GREEN}What do you need help with? Choose an option below:{Style.RESET_ALL}")
+    print(f"[{Fore.GREEN}1{Style.RESET_ALL}] {Fore.CYAN}Starting Anoma{Style.RESET_ALL}")
+    print(f"[{Fore.GREEN}2{Style.RESET_ALL}] {Fore.CYAN}Settings{Style.RESET_ALL}")
+    print(f"[{Fore.GREEN}3{Style.RESET_ALL}] {Fore.CYAN}Check{Style.RESET_ALL}")
+    print(f"[{Fore.GREEN}4{Style.RESET_ALL}] {Fore.CYAN}Other{Style.RESET_ALL}")
+
+    helpInput = input("> ")
+    if "1" in helpInput or "2" in helpInput or "3" in helpInput or "4" in helpInput:
+        pass
+    else:
+        print(f"{Fore.RED}[Anoma] {Fore.CYAN}Answer must be between 1 - 6")
+        exit()
+
 
 if optionInput == "3":
 

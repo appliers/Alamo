@@ -5,6 +5,7 @@ import random
 import string
 import json
 import sys
+import time
 from requests.exceptions import ConnectionError
 import colorful as cf
 
@@ -108,6 +109,8 @@ if optionInput == "1":
 
     requestInput = int(request2Input)
 
+    # =============================================================================================================
+
     #requestInput = int(input())
 
     #request2Input = requestInput
@@ -143,6 +146,9 @@ if optionInput == "1":
             "https" : https_proxy,
         }
 
+        import ctypes
+        ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Running...")
+
         name_extra = ''.join(random.choice(string.digits))
 
         for i in range(requestInput):
@@ -152,11 +158,13 @@ if optionInput == "1":
                 password = ""
                 password = ''.join(random.choice(chars) for i in range(8)) # Or whatever amount of requests you wish to send
                 name_extra = ''.join(random.choice(string.digits))
-                username = 'kingsman' + name_extra + '@yahoo.com'
+                username = 'Kingsman' + name_extra + '@gmail.com'
+
+                header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
 
             # headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
 
-            requests.post(url, allow_redirects=False, headers={'User-Agent': 'Chrome'}, proxies=proxyDict, data={
+            requests.post(url, allow_redirects=False, headers=header, proxies=proxyDict, data={
             	f"{usernameInput}": username,
             	f"{passwordInput}": password
         	})
@@ -164,7 +172,12 @@ if optionInput == "1":
 
         print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
+        import ctypes
+        ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Finished")
+
     else:
+        import ctypes
+        ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Running...")
         name_extra = ''.join(random.choice(string.digits))
 
         for i in range(requestInput):
@@ -174,11 +187,12 @@ if optionInput == "1":
                 password = ""
                 password = ''.join(random.choice(chars) for i in range(8)) # Or whatever amount of requests you wish to send
                 name_extra = ''.join(random.choice(string.digits))
-                username = 'kingsman' + name_extra + '@yahoo.com'
+                username = 'Kingsman' + name_extra + '@gmail.com'
 
-            # headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
+            header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
+            # 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
 
-            requests.post(url, allow_redirects=False, headers={'User-Agent': 'Chrome'}, data={
+            requests.post(url, allow_redirects=False, headers=header, data={
         		f"{usernameInput}": username,
         		f"{passwordInput}": password
         	})
@@ -186,7 +200,8 @@ if optionInput == "1":
 
         print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
-
+        import ctypes
+        ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Finished")
 if optionInput == "2":
     import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Help")

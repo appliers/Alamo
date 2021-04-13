@@ -88,9 +88,21 @@ if optionInput == "1":
     #print(requestInput)
 
     print(Fore.RED + "[Anoma]" + Fore.CYAN + ' How many request do you want to send?: ' + Style.RESET_ALL, end="")
-    requestInput = int(input())
 
+    request2Input = input()
 
+    if not request2Input.isdecimal():
+        raise Exception(f'\n{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}"{request2Input}" is not a number. Please a valid number')
+    else:
+        pass
+
+    requestInput = int(request2Input)
+
+    #requestInput = int(input())
+
+    #request2Input = requestInput
+
+    # requestInput = int(request2Input)
 
     # ==========================================================================================================
 

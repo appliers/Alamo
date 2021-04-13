@@ -117,7 +117,7 @@ if optionInput == "1":
         proxyDict = {
             "http"  : http_proxy,
             "https" : https_proxy,
-            }
+        }
 
         name_extra = ''.join(random.choice(string.digits))
 

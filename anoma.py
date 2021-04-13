@@ -25,7 +25,7 @@ print(f"{Fore.RED}[Anoma] {Fore.GREEN}Select a number from 1 - 6 to continue{Sty
 print(f"[{Fore.GREEN}1{Style.RESET_ALL}] {Fore.CYAN}Start{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}2{Style.RESET_ALL}] {Fore.CYAN}Help{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}3{Style.RESET_ALL}] {Fore.CYAN}Settings{Style.RESET_ALL}")
-print(f"[{Fore.GREEN}4{Style.RESET_ALL}] {Fore.CYAN}View{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}4{Style.RESET_ALL}] {Fore.CYAN}Check{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}5{Style.RESET_ALL}] {Fore.CYAN}About{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}6{Style.RESET_ALL}] {Fore.CYAN}Exit{Style.RESET_ALL}")
 optionInput = input("> ")
@@ -168,9 +168,30 @@ if optionInput == "3":
 
 if optionInput == "4":
     import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | View")
+    ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Check")
 
-    print(f"Coming Soon...")
+    print(f'{Fore.RED}[Anoma] {Fore.CYAN}What website would you like to check? (Do not include "https://" in the URL.):', Style.RESET_ALL, end="")
+    checkInput = input()
+
+    url = 'https://'+checkInput
+
+    response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
+    print(response.headers)
+
+    print(f"{Fore.RED}[Anoma] {Fore.CYAN}Would you like to see the code of {url}?{Style.RESET_ALL}")
+    codeInput = input("> ")
+
+    if "yes" in codeInput or "no" in codeInput:
+        pass
+    else:
+        print(f"{Fore.RED}[Anoma] {Fore.CYAN}Answer must be either {Style.RESET_ALL}{style.BOLD}yes{Style.RESET_ALL} {Fore.CYAN}or {Style.RESET_ALL}{style.BOLD}no{Style.RESET_ALL}")
+        # exit()
+
+    if codeInput == 'yes':
+        print("\n")
+        print(response.text)
+    if codeInput == 'no':
+        exit()
 
 if optionInput == "5":
     print(f"[{Fore.GREEN}Name{Style.RESET_ALL}]: Anoma")

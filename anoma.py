@@ -185,6 +185,7 @@ if optionInput == "3":
 
     print(f"Coming Soon...")
 
+    import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Settings")
 
 if optionInput == "4":
@@ -231,7 +232,7 @@ if optionInput == "5":
     print(f"[{Fore.RED}Discord{Style.RESET_ALL}]: Coming Soon{Style.RESET_ALL}")
     print(f"[{Fore.RED}GitHub{Style.RESET_ALL}]: https://github.com/xkwm1/Anoma{Style.RESET_ALL}")
 
+    import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | About")
 if optionInput == "6":
-
-    os._exit([status])
+    exit();

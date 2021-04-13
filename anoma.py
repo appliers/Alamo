@@ -209,6 +209,7 @@ if optionInput == "5":
     print(f"[{Fore.GREEN}Name{Style.RESET_ALL}]: Anoma")
     print(f"[{Fore.GREEN}Version{Style.RESET_ALL}]: 1.0.0")
     print(f"[{Fore.GREEN}Developer{Style.RESET_ALL}]: xKwm1")
+    print(f"[{Fore.GREEN}Licence{Style.RESET_ALL}]: Apache License 2.0 (Read here: https://github.com/xkwm1/Anoma/blob/main/LICENSE)")
     print(f"[{Fore.RED}Website{Style.RESET_ALL}]: Coming Soon{Style.RESET_ALL}")
     print(f"[{Fore.RED}Discord{Style.RESET_ALL}]: Coming Soon{Style.RESET_ALL}")
     print(f"[{Fore.RED}GitHub{Style.RESET_ALL}]: https://github.com/xkwm1/Anoma{Style.RESET_ALL}")

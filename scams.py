@@ -5,9 +5,6 @@ import random
 import string
 import json
 
-import ctypes
-ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring URL...")
-
 from colored import fore, back, style
 
 from colorama import Fore, Back, Style
@@ -19,7 +16,20 @@ from colorama import init
 init()
 from colorama import Fore, Back, Style
 
-print(Fore.RED + "[SP]" + Fore.CYAN + ' What is the scam URL?: ' + Style.RESET_ALL, end="")
+print(f"\n")
+print(f"{Fore.RED}[Anoma] {Fore.GREEN}Select a number from 1 - 6 to continue{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}1{Style.RESET_ALL}] {Fore.CYAN}Start{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}2{Style.RESET_ALL}] {Fore.CYAN}Help{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}3{Style.RESET_ALL}] {Fore.CYAN}Settings{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}4{Style.RESET_ALL}] {Fore.CYAN}View{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}5{Style.RESET_ALL}] {Fore.CYAN}About{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}6{Style.RESET_ALL}] {Fore.CYAN}Exit{Style.RESET_ALL}")
+optionInput = input("> ")
+
+import ctypes
+ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring URL...")
+
+print(Fore.RED + "[Anoma]" + Fore.CYAN + ' What is the scam URL?: ' + Style.RESET_ALL, end="")
 urlInput = input()
 url = 'https://'+urlInput
 
@@ -29,48 +39,44 @@ url = 'https://'+urlInput
 #else:
 #    print(f'{url} is not a valid URL. Please try a different URL.')
 
-response = requests.get(f'{url}')
-assert response.status_code < 400:
-    print('no')
-
 
 # ==========================================================================================================
 
 import ctypes
-ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring Login...")
+ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring Login...")
 
-print(Fore.RED + "[SP]" + Fore.CYAN + ' What is the login Form Data?: ' + Style.RESET_ALL, end="")
+print(Fore.RED + "[Anoma]" + Fore.CYAN + ' What is the login Form Data?: ' + Style.RESET_ALL, end="")
 usernameInput = input()
 
 
 # ==========================================================================================================
 
 import ctypes
-ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring Password...")
+ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring Password...")
 
 
-print(Fore.RED + "[SP]" + Fore.CYAN + ' What is the password Form Data?: ' + Style.RESET_ALL, end="")
+print(Fore.RED + "[Anoma]" + Fore.CYAN + ' What is the password Form Data?: ' + Style.RESET_ALL, end="")
 passwordInput = input()
 
 # ==========================================================================================================
 
 import ctypes
-ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring Requests...")
+ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring Requests...")
 
 
 #requestInput = int(input(f"{Fore.RED}[SP] {Fore.CYAN}How many requests do you want to make?: {Style.RESET_ALL}"))
 #print(requestInput)
 
-print(Fore.RED + "[SP]" + Fore.CYAN + ' How many request do you want to send?: ' + Style.RESET_ALL, end="")
+print(Fore.RED + "[Anoma]" + Fore.CYAN + ' How many request do you want to send?: ' + Style.RESET_ALL, end="")
 requestInput = int(input())
 
 # ==========================================================================================================
 
 import ctypes
-ctypes.windll.kernel32.SetConsoleTitleW("[Scammer Payback 1.0.0] | Configuring Proxy...")
+ctypes.windll.kernel32.SetConsoleTitleW("[Anoma 1.0.0] | Configuring Proxy...")
 
 
-print(Fore.RED + "[SP]" + Fore.CYAN + ' Would you like to use a Proxy?: ' + Style.RESET_ALL, end="")
+print(Fore.RED + "[Anoma]" + Fore.CYAN + ' Would you like to use a Proxy?: ' + Style.RESET_ALL, end="")
 proxyInput = input()
 
 if "yes" in proxyInput or "no" in proxyInput:
@@ -112,7 +118,7 @@ if proxyInput == "yes":
     	})
         print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
 
-    print(f"{Fore.RED}[SP] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
+    print(f"{Fore.RED}[Anoma] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
 else:
     name_extra = ''.join(random.choice(string.digits))
@@ -134,4 +140,4 @@ else:
     	})
         print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
 
-    print(f"{Fore.RED}[SP] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
+    print(f"{Fore.RED}[Anoma] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")

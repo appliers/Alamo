@@ -32,7 +32,7 @@ import ctypes
 ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Menu")
 
 print(f"\n")
-print(f"{Fore.RED}[Alamo] {Fore.GREEN}Select a number from 1 - 6 to continue{Style.RESET_ALL}")
+print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}Select a number from 1 - 6 to continue{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}1{Style.RESET_ALL}] {Fore.CYAN}Start{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}2{Style.RESET_ALL}] {Fore.CYAN}Help{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}3{Style.RESET_ALL}] {Fore.CYAN}Settings{Style.RESET_ALL}")
@@ -51,14 +51,14 @@ if optionInput == "1":
     import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring URL...")
 
-    print(Fore.RED + "[Alamo]" + Fore.CYAN + ' What is the scam URL?: ' + Style.RESET_ALL, end="")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the scam URL?: {Style.RESET_ALL}", end="")
     urlInput = input()
     url = 'https://'+urlInput
 
     try:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
     except ConnectionError:
-        print(f"{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
+        print(f"{style.BOLD}[{Fore.RED}Error]{Style.RESET_ALL} {Fore.GREEN}{url} is not a valid website. Please try again.")
         exit()
     else:
         pass
@@ -75,7 +75,7 @@ if optionInput == "1":
     import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Login...")
 
-    print(Fore.RED + "[Alamo]" + Fore.CYAN + ' What is the login Form Data?: ' + Style.RESET_ALL, end="")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] What is the login Form Data?: {Style.RESET_ALL}", end="") f"[{Fore.RED}Alamo{Style.RESET_ALL}] What is the login Form Data?: {Style.RESET_ALL}", end=""
     usernameInput = input()
 
 
@@ -85,7 +85,7 @@ if optionInput == "1":
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Password...")
 
 
-    print(Fore.RED + "[Alamo]" + Fore.CYAN + ' What is the password Form Data?: ' + Style.RESET_ALL, end="")
+    print("[{Fore.RED}Alamo{Style.RESET_ALL}] What is the password Form Data?: {Style.RESET_ALL}", end="")
     passwordInput = input()
 
     # ==========================================================================================================
@@ -97,7 +97,7 @@ if optionInput == "1":
     #requestInput = int(input(f"{Fore.RED}[SP] {Fore.CYAN}How many requests do you want to make?: {Style.RESET_ALL}"))
     #print(requestInput)
 
-    print(Fore.RED + "[Alamo]" + Fore.CYAN + ' How many request do you want to send?: ' + Style.RESET_ALL, end="")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] How many requests do you want to send?: {Style.RESET_ALL}", end="")
 
     request2Input = input()
 
@@ -120,7 +120,7 @@ if optionInput == "1":
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Proxy...")
 
 
-    print(Fore.RED + "[Alamo]" + Fore.CYAN + ' Would you like to use a Proxy? (Choose "no" unless you want to be spammed with errors): ' + Style.RESET_ALL, end="")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] What you like to use a Proxy?: {Style.RESET_ALL}", end="")
     proxyInput = input()
 
     if "yes" in proxyInput or "no" in proxyInput:

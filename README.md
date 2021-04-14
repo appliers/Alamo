@@ -27,7 +27,9 @@ Here are some things we would appreciate your help on:
 - Spelling errors and weird font textures
 - Removing lines of code that is unnecessary or unused
 
+Before creating a pull request, please make sure your contribution does not break Alamo or any of its features.
+
 ## License
 
-Apache 2.0 © Alamo<br/>
+Apache 2.0 © Alamo
 Read here: [LICENCE](https://github.com/xkwm1/Alamo/blob/main/LICENSE)

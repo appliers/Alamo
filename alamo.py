@@ -13,8 +13,6 @@ from colored import fore, back, style
 
 from colorama import Fore, Back, Style
 
-cf.use_palette(ci_colors)
-
 chars = string.ascii_letters + string.digits + '!@#$%^&*()'
 random.seed = (os.urandom(1024))
 
@@ -211,10 +209,11 @@ if optionInput == "1":
             header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
             # 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
 
-            requests.post(url, allow_redirects=False, headers=header, proxies=proxyDict, data={
+            requests.post(url, allow_redirects=False, headers=header, data={
             	f"{usernameInput}": username,
                 f"{passwordInput}": password
         	})
+
             print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
 
         print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")

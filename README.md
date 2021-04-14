@@ -1,7 +1,7 @@
 
 # Alamo
 Alamo is a piece of software written in Python and is used to send spam login requests to a website. It is intended for use on scammers' websites.
-<br>
+<br><br>
 <img src="./images/alamo.png"/>
 
 ## Installation

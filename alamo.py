@@ -56,9 +56,9 @@ if optionInput == "1":
 #    import ctypes
 #    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring URL...")
 
-    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the scam URL?: {Style.RESET_ALL}", end="")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the scam URL? (Include https://): {Style.RESET_ALL}", end="")
     urlInput = input()
-    url = 'https://'+urlInput
+    url = urlInput
 
     if url == "":
         print(f"You didn't enter a URL idiot")

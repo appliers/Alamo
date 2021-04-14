@@ -13,13 +13,6 @@ from colored import fore, back, style
 
 from colorama import Fore, Back, Style
 
-ci_colors = {
-    'mint': '#c5e8c8',  # RGB hex value
-    'darkRed': '#c11b55',  # RGB hex value
-    'lightBlue': (15, 138, 191),  # RGB channel triplet
-    'pink': '#FFC0CB'
-}
-
 cf.use_palette(ci_colors)
 
 chars = string.ascii_letters + string.digits + '!@#$%^&*()'
@@ -64,10 +57,10 @@ if optionInput == "1":
     try:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
     except ConnectionError:
-        print(f"{style.BOLD}[{Fore.RED}Error]{Style.RESET_ALL} {Fore.GREEN}{url} is not a valid website. Please try again.")
+        print(f"[{Fore.RED}Error{Style.RESET_dALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
         exit()
     except ValueError:
-        print("Please enter a URL, and not nothing")
+        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You haven't inputted anything. Please try again.{Style.RESET_ALL}")
         exit()
     else:
         pass
@@ -84,15 +77,15 @@ if optionInput == "1":
     import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Login...")
 
-    #print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the login Form Data?: {Style.RESET_ALL}", end="")
-    #usernameInput = input()
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the login Form Data?: {Style.RESET_ALL}", end="")
+    usernameInput = input()
 
-    try:
-        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the login Form Data?: {Style.RESET_ALL}", end="")
-        usernameINput = input()
-    except ValueError:
-        print(f"[]{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You didn't enter anything! Please try again.{Style.RESET_ALL}")
-        exit()
+    #try:
+    #    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the login Form Data?: {Style.RESET_ALL}", end="")
+    #    usernameInput = input()
+    #except ValueError:
+    #    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You didn't enter anything! Please try again.{Style.RESET_ALL}")
+    #    exit()
 
 
 
@@ -102,15 +95,15 @@ if optionInput == "1":
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Password...")
 
 
-    #print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the password Form Data?: {Style.RESET_ALL}", end="")
-    #passwordInput = input()
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the password Form Data?: {Style.RESET_ALL}", end="")
+    passwordInput = input()
 
-    try:
-        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the password Form Data?: {Style.RESET_ALL}", end="")
-        passwordInput = input()
-    except ValueError:
-        print(f"[]{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You didn't enter anything! Please try again.{Style.RESET_ALL}")
-        exit()
+    #try:
+    #    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the password Form Data?: {Style.RESET_ALL}", end="")
+    #    passwordInput = input()
+    #except ValueError:
+    #    print(f"[]{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You didn't enter anything! Please try again.{Style.RESET_ALL}")
+    #    exit()
 
     # ==========================================================================================================
 
@@ -123,13 +116,7 @@ if optionInput == "1":
 
     print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}How many requests do you want to send?: {Style.RESET_ALL}", end="")
 
-    # request2Input = input()
-
-    try:
-        request2Input = input()
-    except ValueError:
-        print(f"[]{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You didn't enter anything! Please try again.{Style.RESET_ALL}")
-        exit()
+    request2Input = input()
 
     if not request2Input.isdecimal():
         raise Exception(f'\n{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}"{request2Input}" is not a number. Please a valid number')
@@ -197,6 +184,8 @@ if optionInput == "1":
             	f"{usernameInput}": username,
             	f"{passwordInput}": password
         	})
+# raise ProxyError(f'\n{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}"{request2Input}" Failed to connect to the proxies. Please try again.')
+
             print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
 
         print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
@@ -222,9 +211,9 @@ if optionInput == "1":
             header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
             # 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
 
-            requests.post(url, allow_redirects=False, headers=header, data={
-        		f"{usernameInput}": username,
-        		f"{passwordInput}": password
+            requests.post(url, allow_redirects=False, headers=header, proxies=proxyDict, data={
+            	f"{usernameInput}": username,
+                f"{passwordInput}": password
         	})
             print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
 

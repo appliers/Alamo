@@ -10,7 +10,7 @@ Alamo is a piece of software written in Python and is used to send spam login re
 # clone the repo
 $ git clone https://github.com/xkwm1/Alamo.git
 
-# change the working directory to sherlock
+# change the working directory to alamo
 $ cd alamo
 
 # install the requirements

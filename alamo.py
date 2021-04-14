@@ -147,7 +147,7 @@ if optionInput == "1":
         }
 
         import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Running...")
+        ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Sending {requestInput} requests to {url}")
 
         name_extra = ''.join(random.choice(string.digits))
 
@@ -173,11 +173,12 @@ if optionInput == "1":
         print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
         import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Finished")
+        ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Successfully sent {requestInput} to {url}")
 
     else:
         import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Running...")
+        ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Sending {requestInput} requests to {url}")
+
         name_extra = ''.join(random.choice(string.digits))
 
         for i in range(requestInput):
@@ -185,7 +186,7 @@ if optionInput == "1":
 
                 chars = list(string.ascii_lowercase)+list(string.ascii_uppercase)+list(string.digits)
                 password = ""
-                password = ''.join(random.choice(chars) for i in range(8)) # Or whatever amount of requests you wish to send
+                password = ''.join(random.choice(chars) for i in range(12)) # Or whatever amount of requests you wish to send
                 name_extra = ''.join(random.choice(string.digits))
                 username = 'Kingsman' + name_extra + '@gmail.com'
 
@@ -201,35 +202,40 @@ if optionInput == "1":
         print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
         import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Finished")
+        ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Successfully sent {requestInput} to {url}")
+
 if optionInput == "2":
     import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Help")
 
-    print(f"{Fore.RED}[Alamo] {Fore.GREEN}What do you need help with? Choose an option below:{Style.RESET_ALL}")
-    print(f"[{Fore.GREEN}1{Style.RESET_ALL}] {Fore.CYAN}Starting Alamo{Style.RESET_ALL}")
-    print(f"[{Fore.GREEN}2{Style.RESET_ALL}] {Fore.CYAN}Settings{Style.RESET_ALL}")
-    print(f"[{Fore.GREEN}3{Style.RESET_ALL}] {Fore.CYAN}Check{Style.RESET_ALL}")
-    print(f"[{Fore.GREEN}4{Style.RESET_ALL}] {Fore.CYAN}Other{Style.RESET_ALL}")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}What do you need help with? Choose an option below:{Style.RESET_ALL}")
+    print(f"[{Fore.MAGENTA}1{Style.RESET_ALL}] {Fore.CYAN}Starting Alamo{Style.RESET_ALL}")
+    print(f"[{Fore.MAGENTA}2{Style.RESET_ALL}] {Fore.CYAN}Settings{Style.RESET_ALL}")
+    print(f"[{Fore.MAGENTA}3{Style.RESET_ALL}] {Fore.CYAN}Check{Style.RESET_ALL}")
+    print(f"[{Fore.MAGENTA}4{Style.RESET_ALL}] {Fore.CYAN}Other{Style.RESET_ALL}")
 
     helpInput = input("> ")
     if "1" in helpInput or "2" in helpInput or "3" in helpInput or "4" in helpInput:
         pass
     else:
-        print(f"[{Fore.MAGENTA}Hydra{Style.RESET_ALL}] {Fore.CYAN}Answer must be between 1 - 4")
+        print(f"[{Fore.MAGENTA}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be between 1 - 4")
         exit()
 
     if helpInput == "1":
-        print(f"coming soon")
+        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}Look through this list to see your problem and copy and paste the link into a browser", Style.RESET_ALL)
+        print("\n")
+        print(f"[{Fore.MAGENTA}Form Data{Style.RESET_ALL}]: {Fore.CYAN}https://github.com/xkwm1/Alamo/blob/main/help/Start/Form-Data.md{Style.RESET_ALL}")
+        print(f"[{Fore.MAGENTA}Proxy{Style.RESET_ALL}]: {Fore.CYAN}https://github.com/xkwm1/Alamo/blob/main/help/Start/Proxy.md{Style.RESET_ALL}")
 
     if helpInput == "2":
-        print(f"coming soon")
+        print(f"[{Fore.MAGENTA}Settings{Style.RESET_ALL}]: {Fore.CYAN}'Settings' is coming soon...", Style.RESET_ALL)
 
     if helpInput == "3":
-        print(f"coming soon")
+        print(f"[{Fore.MAGENTA}Check{Style.RESET_ALL}]: {Fore.CYAN}'Check is' coming soon...", Style.RESET_ALL)
 
     if helpInput == "4":
-        print(f"coming soon")
+        print(f"[{Fore.MAGENTA}Other{Style.RESET_ALL}]: {Fore.CYAN}'Others' is coming soon...", Style.RESET_ALL)
+        print(f"[{Fore.MAGENTA}What is Alamo?{Style.RESET_ALL}]: {Fore.CYAN}'What is Alamo?' is coming soon...", Style.RESET_ALL)
 
 
 if optionInput == "3":
@@ -242,7 +248,7 @@ if optionInput == "4":
     import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Check")
 
-    print(f'{Fore.RED}[Alamo] {Fore.CYAN}What website would you like to check? (Do not include "https://" in the URL.):', Style.RESET_ALL, end="")
+    print(f'[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What website would you like to check? (Do not include "https://" in the URL.):', Style.RESET_ALL, end="")
     checkInput = input()
 
     url = 'https://'+checkInput
@@ -258,13 +264,13 @@ if optionInput == "4":
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
         print(response.headers)
 
-    print(f"{Fore.RED}[Alamo] {Fore.CYAN}Would you like to see the code of {url}?{Style.RESET_ALL}")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Would you like to see the code of {url}?{Style.RESET_ALL}")
     codeInput = input("> ")
 
     if "yes" in codeInput or "no" in codeInput:
         pass
     else:
-        print(f"{Fore.RED}[Alamo] {Fore.CYAN}Answer must be either {Style.RESET_ALL}{style.BOLD}yes{Style.RESET_ALL} {Fore.CYAN}or {Style.RESET_ALL}{style.BOLD}no{Style.RESET_ALL}")
+        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be either {Style.RESET_ALL}{style.BOLD}yes{Style.RESET_ALL} {Fore.CYAN}or {Style.RESET_ALL}{style.BOLD}no{Style.RESET_ALL}")
         # exit()
 
     if codeInput == 'yes':

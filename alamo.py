@@ -63,10 +63,10 @@ if optionInput == "1":
     try:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
     except ConnectionError:
-        print(f"[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
+        print(f"[{Fore.BLACK}{Style.BRIGHT}Error{Style.RESET_ALL}] [{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
         exit()
     except ValueError:
-        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You haven't inputted anything. Please try again.{Style.RESET_ALL}")
+        print(f"[{Fore.BLACK}{Style.BRIGHT}Error{Style.RESET_ALL}] [{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You haven't inputted anything. Please try again.{Style.RESET_ALL}")
         exit()
     else:
         pass
@@ -125,7 +125,7 @@ if optionInput == "1":
     request2Input = input()
 
     if not request2Input.isdecimal():
-        raise Exception(f'\n{Style.BRIGHT}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}"{request2Input}" is not a number. Please a valid number')
+        raise Exception(f'\n[{Fore.BLACK}{Style.BRIGHT}Error{Style.RESET_ALL}] [{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}"{request2Input}" is not a number. Please a valid number')
     else:
         pass
 
@@ -151,7 +151,7 @@ if optionInput == "1":
     if "yes" in proxyInput or "no" in proxyInput:
         pass
     else:
-        print(f"{Fore.WHITE}[ {Fore.RED}! {Fore.WHITE}] {Fore.LIGHTBLACK_EX}Answer must be {Fore.WHITE}yes {Fore.LIGHTBLACK_EX}or {Fore.WHITE}no")
+        print(f"[{Fore.BLACK}{Style.BRIGHT}Error{Style.RESET_ALL}] {Fore.WHITE}[{Fore.RED}Alamo] {Fore.CYAN}Answer must be {Fore.WHITE}yes {Fore.LIGHTBLACK_EX}or {Fore.WHITE}no")
         exit()
 
     if proxyInput == "yes":
@@ -243,7 +243,7 @@ if optionInput == "2":
     if "1" in helpInput or "2" in helpInput or "3" in helpInput or "4" in helpInput:
         pass
     else:
-        print(f"[{Fore.MAGENTA}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be between 1 - 4")
+        print(f"[{Fore.BLACK}{Style.BRIGHT}Error{Style.RESET_ALL}] [{Fore.MAGENTA}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be between 1 - 4")
         exit()
 
     if helpInput == "1":
@@ -283,7 +283,7 @@ if optionInput == "4":
     try:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
     except ConnectionError:
-        print(f"{Style.BRIGHT}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
+        print(f"[{Fore.BLACK}{Style.BRIGHT}Error{Style.RESET_ALL}] [{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
         exit()
     else:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
@@ -295,7 +295,7 @@ if optionInput == "4":
     if "yes" in codeInput or "no" in codeInput:
         pass
     else:
-        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be either {Style.RESET_ALL}{Style.BRIGHT}yes{Style.RESET_ALL} {Fore.CYAN}or {Style.RESET_ALL}{Style.BRIGHT}no{Style.RESET_ALL}")
+        print(f"[{Fore.BLACK}{Style.BRIGHT}Error{Style.RESET_ALL}] [{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be either {Style.RESET_ALL}{Style.BRIGHT}yes{Style.RESET_ALL} {Fore.CYAN}or {Style.RESET_ALL}{Style.BRIGHT}no{Style.RESET_ALL}")
         # exit()
 
     if codeInput == 'yes':

@@ -23,6 +23,18 @@ from colorama import Fore, Back, Style
 
 #import ctypes
 #ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Menu")
+print(f"\n")
+
+print(f'{Style.BRIGHT}{Fore.BLUE}  ▄▄▄       ██▓    ▄▄▄      ███▄ ▄███▓ ▒█████         ')
+print(f'{Style.BRIGHT}{Fore.BLUE}  ▒████▄    ▓██▒   ▒████▄   ▓██▒▀█▀ ██▒▒██▒  ██▒      ')
+print(f'{Style.BRIGHT}{Fore.BLUE}  ▒██  ▀█▄  ▒██░   ▒██  ▀█▄ ▓██    ▓██░▒██░  ██▒      ')
+print(f'{Style.BRIGHT}{Fore.BLUE}  ░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██▒██    ▒██ ▒██   ██░      ')
+print(f'{Style.BRIGHT}{Fore.BLUE}  ▓█   ▓██▒░██████▒▓█   ▓██▒██▒   ░██▒░ ████▓▒░       ')
+print(f'{Style.BRIGHT}{Fore.BLUE}  ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░ ▒░   ░  ░░ ▒░▒░▒░        ')
+print(f'{Style.BRIGHT}{Fore.BLUE}  ░   ▒▒ ░░ ░ ▒  ░ ░   ▒▒ ░  ░      ░  ░ ▒ ▒░         ')
+print(f'{Style.BRIGHT}{Fore.BLUE}  ░   ▒     ░ ░    ░   ▒  ░      ░   ░ ░ ░ ▒          ')
+print(f'{Style.BRIGHT}{Fore.BLUE}      ░  ░    ░        ░         ░       ░ ░            ', Style.RESET_ALL)
+
 
 print(f"\n")
 print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}Select a number from 1 - 6 to continue{Style.RESET_ALL}")
@@ -56,7 +68,7 @@ if optionInput == "1":
     try:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
     except ConnectionError:
-        print(f"[{Fore.RED}Error{Style.RESET_dALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
+        print(f"[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
         exit()
     except ValueError:
         print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You haven't inputted anything. Please try again.{Style.RESET_ALL}")
@@ -161,9 +173,9 @@ if optionInput == "1":
             "https" : https_proxy,
         }
 
-    #    import ctypes
+        import ctypes
     #    ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Sending {requestInput} requests to {url}")
-
+    #
         name_extra = ''.join(random.choice(string.digits))
 
         for i in range(requestInput):

@@ -56,10 +56,18 @@ if optionInput == "1":
     urlInput = input()
     url = 'https://'+urlInput
 
+    if url == "":
+        print(f"You didn't enter a URl idiot")
+    else:
+        pass
+
     try:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
     except ConnectionError:
         print(f"{style.BOLD}[{Fore.RED}Error]{Style.RESET_ALL} {Fore.GREEN}{url} is not a valid website. Please try again.")
+        exit()
+    except ValueError:
+        print("Please enter a URL, and not nothing")
         exit()
     else:
         pass
@@ -76,8 +84,16 @@ if optionInput == "1":
     import ctypes
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Login...")
 
-    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the login Form Data?: {Style.RESET_ALL}", end="")
-    usernameInput = input()
+    #print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the login Form Data?: {Style.RESET_ALL}", end="")
+    #usernameInput = input()
+
+    try:
+        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the login Form Data?: {Style.RESET_ALL}", end="")
+        usernameINput = input()
+    except ValueError:
+        print(f"[]{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You didn't enter anything! Please try again.{Style.RESET_ALL}")
+        exit()
+
 
 
     # ==========================================================================================================
@@ -86,8 +102,15 @@ if optionInput == "1":
     ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Password...")
 
 
-    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the password Form Data?: {Style.RESET_ALL}", end="")
-    passwordInput = input()
+    #print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the password Form Data?: {Style.RESET_ALL}", end="")
+    #passwordInput = input()
+
+    try:
+        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the password Form Data?: {Style.RESET_ALL}", end="")
+        passwordInput = input()
+    except ValueError:
+        print(f"[]{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You didn't enter anything! Please try again.{Style.RESET_ALL}")
+        exit()
 
     # ==========================================================================================================
 
@@ -100,7 +123,13 @@ if optionInput == "1":
 
     print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}How many requests do you want to send?: {Style.RESET_ALL}", end="")
 
-    request2Input = input()
+    # request2Input = input()
+
+    try:
+        request2Input = input()
+    except ValueError:
+        print(f"[]{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}You didn't enter anything! Please try again.{Style.RESET_ALL}")
+        exit()
 
     if not request2Input.isdecimal():
         raise Exception(f'\n{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}"{request2Input}" is not a number. Please a valid number')

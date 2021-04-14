@@ -8,6 +8,8 @@ import sys
 import time
 from requests.exceptions import ConnectionError
 
+# Added the [Error] tag to errors such as in line 40;
+
 from colored import fore, back, style
 
 from colorama import Fore, Back, Style
@@ -35,7 +37,7 @@ optionInput = input("> ")
 if "1" in optionInput or "2" in optionInput or "3" in optionInput or "4" in optionInput or "5" in optionInput or "6" in optionInput:
     pass
 else:
-    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be between 1 - 6")
+    print(f"[{Fore.BLACK}{Style.BRIGHT}Error{Style.RESET_ALL}] [{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be between 1 - 6")
     exit()
 
 if optionInput == "1":

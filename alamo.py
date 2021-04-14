@@ -25,15 +25,15 @@ from colorama import Fore, Back, Style
 #ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Menu")
 print(f"\n")
 
-print(f'{Style.BRIGHT}{Fore.BLUE}  ▄▄▄       ██▓    ▄▄▄      ███▄ ▄███▓ ▒█████         ')
+print(f'{Style.BRIGHT}{Fore.BLUE}   ▄▄▄       ██▓    ▄▄▄      ███▄ ▄███▓  ▒████         ')
 print(f'{Style.BRIGHT}{Fore.BLUE}  ▒████▄    ▓██▒   ▒████▄   ▓██▒▀█▀ ██▒▒██▒  ██▒      ')
 print(f'{Style.BRIGHT}{Fore.BLUE}  ▒██  ▀█▄  ▒██░   ▒██  ▀█▄ ▓██    ▓██░▒██░  ██▒      ')
 print(f'{Style.BRIGHT}{Fore.BLUE}  ░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██▒██    ▒██ ▒██   ██░      ')
-print(f'{Style.BRIGHT}{Fore.BLUE}  ▓█   ▓██▒░██████▒▓█   ▓██▒██▒   ░██▒░ ████▓▒░       ')
-print(f'{Style.BRIGHT}{Fore.BLUE}  ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░ ▒░   ░  ░░ ▒░▒░▒░        ')
-print(f'{Style.BRIGHT}{Fore.BLUE}  ░   ▒▒ ░░ ░ ▒  ░ ░   ▒▒ ░  ░      ░  ░ ▒ ▒░         ')
-print(f'{Style.BRIGHT}{Fore.BLUE}  ░   ▒     ░ ░    ░   ▒  ░      ░   ░ ░ ░ ▒          ')
-print(f'{Style.BRIGHT}{Fore.BLUE}      ░  ░    ░        ░         ░       ░ ░          ', Style.RESET_ALL)
+print(f'{Style.BRIGHT}{Fore.BLUE}   ▓█   ▓██▒░██████▒▓█   ▓██▒██▒   ░██▒░  ████▓▒░       ')
+print(f'{Style.BRIGHT}{Fore.BLUE}   ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░ ▒░   ░  ░░ ▒░▒░▒░        ')
+print(f'{Style.BRIGHT}{Fore.BLUE}    ░   ▒▒ ░░ ░ ▒  ░ ░   ▒▒ ░  ░      ░  ░ ▒ ▒░         ')
+print(f'{Style.BRIGHT}{Fore.BLUE}    ░   ▒     ░ ░    ░   ▒  ░      ░   ░ ░ ░ ▒          ')
+print(f'{Style.BRIGHT}{Fore.BLUE}        ░  ░    ░        ░         ░       ░ ░          ', Style.RESET_ALL)
 
 
 print(f"\n")

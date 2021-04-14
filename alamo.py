@@ -60,11 +60,6 @@ if optionInput == "1":
     urlInput = input()
     url = urlInput
 
-    if url == "":
-        print(f"You didn't enter a URL idiot")
-    else:
-        pass
-
     try:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
     except ConnectionError:

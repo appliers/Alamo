@@ -57,7 +57,7 @@ if optionInput == "1":
     url = 'https://'+urlInput
 
     if url == "":
-        print(f"You didn't enter a URl idiot")
+        print(f"You didn't enter a URL idiot")
     else:
         pass
 

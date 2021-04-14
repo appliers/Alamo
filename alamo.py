@@ -20,8 +20,8 @@ from colorama import init
 init()
 from colorama import Fore, Back, Style
 
-import ctypes
-ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Menu")
+#import ctypes
+#ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Menu")
 
 print(f"\n")
 print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}Select a number from 1 - 6 to continue{Style.RESET_ALL}")
@@ -40,8 +40,8 @@ else:
     exit()
 
 if optionInput == "1":
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring URL...")
+#    import ctypes
+#    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring URL...")
 
     print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the scam URL?: {Style.RESET_ALL}", end="")
     urlInput = input()
@@ -72,8 +72,8 @@ if optionInput == "1":
 
     # ==========================================================================================================
 
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Login...")
+#    import ctypes
+#    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Login...")
 
     print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the login Form Data?: {Style.RESET_ALL}", end="")
     usernameInput = input()
@@ -89,8 +89,8 @@ if optionInput == "1":
 
     # ==========================================================================================================
 
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Password...")
+#    import ctypes
+#    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Password...")
 
 
     print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the password Form Data?: {Style.RESET_ALL}", end="")
@@ -105,8 +105,8 @@ if optionInput == "1":
 
     # ==========================================================================================================
 
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Requests...")
+#    import ctypes
+#    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Requests...")
 
 
     #requestInput = int(input(f"{Fore.RED}[SP] {Fore.CYAN}How many requests do you want to make?: {Style.RESET_ALL}"))
@@ -133,8 +133,8 @@ if optionInput == "1":
 
     # ==========================================================================================================
 
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Proxy...")
+#    import ctypes
+#    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Proxy...")
 
 
     print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What you like to use a Proxy?: {Style.RESET_ALL}", end="")
@@ -160,8 +160,8 @@ if optionInput == "1":
             "https" : https_proxy,
         }
 
-        import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Sending {requestInput} requests to {url}")
+    #    import ctypes
+    #    ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Sending {requestInput} requests to {url}")
 
         name_extra = ''.join(random.choice(string.digits))
 
@@ -188,12 +188,12 @@ if optionInput == "1":
 
         print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
-        import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Successfully sent {requestInput} to {url}")
+    #    import ctypes
+    #    ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Successfully sent {requestInput} to {url}")
 
     else:
-        import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Sending {requestInput} requests to {url}")
+    #    import ctypes
+    #    ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Sending {requestInput} requests to {url}")
 
         name_extra = ''.join(random.choice(string.digits))
 
@@ -218,12 +218,12 @@ if optionInput == "1":
 
         print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
-        import ctypes
-        ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Successfully sent {requestInput} to {url}")
+#        import ctypes
+    #    ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Successfully sent {requestInput} to {url}")
 
 if optionInput == "2":
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Help")
+#    import ctypes
+#    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Help")
 
     print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}What do you need help with? Choose an option below:{Style.RESET_ALL}")
     print(f"[{Fore.MAGENTA}1{Style.RESET_ALL}] {Fore.CYAN}Starting Alamo{Style.RESET_ALL}")
@@ -256,14 +256,14 @@ if optionInput == "2":
 
 
 if optionInput == "3":
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo ] | Settings")
+#    import ctypes
+#    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo ] | Settings")
 
     print(f"Coming Soon...")
 
 if optionInput == "4":
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Check")
+#    import ctypes
+#    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Check")
 
     print(f'[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What website would you like to check? (Do not include "https://" in the URL.):', Style.RESET_ALL, end="")
     checkInput = input()
@@ -305,7 +305,7 @@ if optionInput == "5":
     print(f"[{Fore.RED}Discord{Style.RESET_ALL}]: Coming Soon{Style.RESET_ALL}")
     print(f"[{Fore.RED}GitHub{Style.RESET_ALL}]: https://github.com/xkwm1/Alamo{Style.RESET_ALL}")
 
-    import ctypes
-    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | About")
+#    import ctypes
+#    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | About")
 if optionInput == "6":
     exit();

@@ -33,7 +33,7 @@ print(f'{Style.BRIGHT}{Fore.BLUE}  ▓█   ▓██▒░██████▒
 print(f'{Style.BRIGHT}{Fore.BLUE}  ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░ ▒░   ░  ░░ ▒░▒░▒░        ')
 print(f'{Style.BRIGHT}{Fore.BLUE}  ░   ▒▒ ░░ ░ ▒  ░ ░   ▒▒ ░  ░      ░  ░ ▒ ▒░         ')
 print(f'{Style.BRIGHT}{Fore.BLUE}  ░   ▒     ░ ░    ░   ▒  ░      ░   ░ ░ ░ ▒          ')
-print(f'{Style.BRIGHT}{Fore.BLUE}      ░  ░    ░        ░         ░       ░ ░            ', Style.RESET_ALL)
+print(f'{Style.BRIGHT}{Fore.BLUE}      ░  ░    ░        ░         ░       ░ ░          ', Style.RESET_ALL)
 
 
 print(f"\n")

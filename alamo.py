@@ -7,7 +7,6 @@ import json
 import sys
 import time
 from requests.exceptions import ConnectionError
-import colorful as cf
 
 from colored import fore, back, style
 

@@ -130,7 +130,7 @@ if optionInput == "1":
     request2Input = input()
 
     if not request2Input.isdecimal():
-        raise Exception(f'\n{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}"{request2Input}" is not a number. Please a valid number')
+        raise Exception(f'\n{Style.BRIGHT}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}"{request2Input}" is not a number. Please a valid number')
     else:
         pass
 
@@ -197,9 +197,9 @@ if optionInput == "1":
         	})
 # raise ProxyError(f'\n{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}"{request2Input}" Failed to connect to the proxies. Please try again.')
 
-            print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
+            print(f"Sending {Style.BRIGHT}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
 
-        print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
+        print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{Style.BRIGHT}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
     #    import ctypes
     #    ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Successfully sent {requestInput} to {url}")
@@ -227,9 +227,9 @@ if optionInput == "1":
                 f"{passwordInput}": password
         	})
 
-            print(f"Sending {style.BOLD}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
+            print(f"Sending {Style.BRIGHT}1{Style.RESET_ALL} requests with the Username {style.UNDERLINED}{username} and Password {style.UNDERLINED}{password}")
 
-        print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{style.BOLD}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
+        print(f"{Fore.RED}[Alamo] {Fore.CYAN}Successfully sent {Style.RESET_ALL}{Style.BRIGHT}{requestInput}{Style.RESET_ALL}{Fore.CYAN} requests to {style.UNDERLINED}{url}.")
 
 #        import ctypes
     #    ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Successfully sent {requestInput} to {url}")
@@ -288,7 +288,7 @@ if optionInput == "4":
     try:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
     except ConnectionError:
-        print(f"{style.BOLD}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
+        print(f"{Style.BRIGHT}[{Fore.RED}Error{Style.RESET_ALL}] {Fore.GREEN}{url} is not a valid website. Please try again.")
         exit()
     else:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
@@ -300,7 +300,7 @@ if optionInput == "4":
     if "yes" in codeInput or "no" in codeInput:
         pass
     else:
-        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be either {Style.RESET_ALL}{style.BOLD}yes{Style.RESET_ALL} {Fore.CYAN}or {Style.RESET_ALL}{style.BOLD}no{Style.RESET_ALL}")
+        print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Answer must be either {Style.RESET_ALL}{Style.BRIGHT}yes{Style.RESET_ALL} {Fore.CYAN}or {Style.RESET_ALL}{Style.BRIGHT}no{Style.RESET_ALL}")
         # exit()
 
     if codeInput == 'yes':

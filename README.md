@@ -18,3 +18,16 @@ $ python3 -m pip install -r requirements.txt
 ```
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fxkwm1%2FAlamo&cloudshell_git_branch=main)
+
+## Contributing
+Thank you for thinking about contributing towards Alamo. Each and every contribution is greatly valued!\
+
+Here are some things we would appreciate your help on:
+- Bugs in Alamo
+- Spelling errors and weird font textures
+- Removing lines of code that is unnecessary or unused
+
+## License
+
+Apache 2.0 © Alamo<br/>
+Read here: [LICENCE](https://github.com/xkwm1/Alamo/blob/main/LICENSE)

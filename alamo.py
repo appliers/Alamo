@@ -5,7 +5,6 @@ import random
 import string
 import json
 import sys
-from os import system
 import time
 import socket
 import threading
@@ -26,7 +25,7 @@ from colorama import Fore, Back, Style
 
 #import ctypes
 #ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Menu")
-system('cls')
+os.system('cls' if os.name == 'nt' else 'clear')
 print(f"\n")
 
 print(f'{Style.BRIGHT}{Fore.BLUE}   ▄▄▄       ██▓    ▄▄▄      ███▄ ▄███▓  ▒████         ')

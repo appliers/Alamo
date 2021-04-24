@@ -60,7 +60,7 @@ if optionInput == "1":
 #    import ctypes
 #    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring URL...")
 
-    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the scam URL? (Include https://): {Style.RESET_ALL}", end="")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Scam URL? (Include https://): {Style.RESET_ALL}", end="")
     urlInput = input()
     url = urlInput
 
@@ -87,7 +87,7 @@ if optionInput == "1":
 #    import ctypes
 #    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Login...")
 
-    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the login Form Data?: {Style.RESET_ALL}", end="")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Login Form Data?: {Style.RESET_ALL}", end="")
     usernameInput = input()
 
     #try:
@@ -105,7 +105,7 @@ if optionInput == "1":
 #    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Configuring Password...")
 
 
-    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}What is the password Form Data?: {Style.RESET_ALL}", end="")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Password Form Data?: {Style.RESET_ALL}", end="")
     passwordInput = input()
 
     #try:
@@ -124,7 +124,7 @@ if optionInput == "1":
     #requestInput = int(input(f"{Fore.RED}[SP] {Fore.CYAN}How many requests do you want to make?: {Style.RESET_ALL}"))
     #print(requestInput)
 
-    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}How many requests do you want to send?: {Style.RESET_ALL}", end="")
+    print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.CYAN}Requests: {Style.RESET_ALL}", end="")
 
     request2Input = input()
 
@@ -361,4 +361,5 @@ if optionInput == "6":
 #    import ctypes
 #    ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | About")
 if optionInput == "7":
+    os.system('cls' if os.name == 'nt' else 'clear')
     exit();

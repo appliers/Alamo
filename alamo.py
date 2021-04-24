@@ -28,6 +28,15 @@ from colorama import Fore, Back, Style
 os.system('cls' if os.name == 'nt' else 'clear')
 print(f"\n")
 
+    time.sleep(2) # Wait a few seconds
+    self.slowType(f"""{Style.BRIGHT}{Fore.BLUE}
+ ▄▄▄· ▄▄▌   ▄▄▄· • ▌ ▄ ·.
+▐█ ▀█ ██•  ▐█ ▀█ ·██ ▐███▪ ▄█▀▄
+▄█▀▀█ ██ ▪ ▄█▀▀█ ▐█ ▌▐▌▐█·▐█▌.▐▌
+▐█▪ ▐▌▐█▌ ▄▐█▪ ▐▌██ ██▌▐█▌▐█▌.▐▌
+ ▀  ▀ .▀▀▀  ▀  ▀ ▀▀  █▪▀▀▀ ▀█▄▀▪
+    {Style.RESET_ALL}""", .02)
+
 print(f'{Style.BRIGHT}{Fore.BLUE}   ▄▄▄       ██▓    ▄▄▄      ███▄ ▄███▓  ▒████         ')
 print(f'{Style.BRIGHT}{Fore.BLUE}  ▒████▄    ▓██▒   ▒████▄   ▓██▒▀█▀ ██▒▒██▒  ██▒      ')
 print(f'{Style.BRIGHT}{Fore.BLUE}  ▒██  ▀█▄  ▒██░   ▒██  ▀█▄ ▓██    ▓██░▒██░  ██▒      ')

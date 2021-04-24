@@ -26,28 +26,34 @@ from colorama import Fore, Back, Style
 #import ctypes
 #ctypes.windll.kernel32.SetConsoleTitleW("[Alamo 1.0.1] | Menu")
 os.system('cls' if os.name == 'nt' else 'clear')
-print(f"\n")
+# print(f"\n")
 
-    time.sleep(2) # Wait a few seconds
-    self.slowType(f"""{Style.BRIGHT}{Fore.BLUE}
+def print_slow(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(.017)
+
+#time.sleep(2) # Wait a few seconds
+print_slow(f"""{Style.BRIGHT}{Fore.BLUE}
  ▄▄▄· ▄▄▌   ▄▄▄· • ▌ ▄ ·.
 ▐█ ▀█ ██•  ▐█ ▀█ ·██ ▐███▪ ▄█▀▄
 ▄█▀▀█ ██ ▪ ▄█▀▀█ ▐█ ▌▐▌▐█·▐█▌.▐▌
 ▐█▪ ▐▌▐█▌ ▄▐█▪ ▐▌██ ██▌▐█▌▐█▌.▐▌
  ▀  ▀ .▀▀▀  ▀  ▀ ▀▀  █▪▀▀▀ ▀█▄▀▪
-    {Style.RESET_ALL}""", .02)
+{Style.RESET_ALL}""")
 
-print(f'{Style.BRIGHT}{Fore.BLUE}   ▄▄▄       ██▓    ▄▄▄      ███▄ ▄███▓  ▒████         ')
-print(f'{Style.BRIGHT}{Fore.BLUE}  ▒████▄    ▓██▒   ▒████▄   ▓██▒▀█▀ ██▒▒██▒  ██▒      ')
-print(f'{Style.BRIGHT}{Fore.BLUE}  ▒██  ▀█▄  ▒██░   ▒██  ▀█▄ ▓██    ▓██░▒██░  ██▒      ')
-print(f'{Style.BRIGHT}{Fore.BLUE}  ░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██▒██    ▒██ ▒██   ██░      ')
-print(f'{Style.BRIGHT}{Fore.BLUE}   ▓█   ▓██▒░██████▒▓█   ▓██▒██▒   ░██▒░  ████▓▒░       ')
-print(f'{Style.BRIGHT}{Fore.BLUE}   ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░ ▒░   ░  ░░ ▒░▒░▒░        ')
-print(f'{Style.BRIGHT}{Fore.BLUE}    ░   ▒▒ ░░ ░ ▒  ░ ░   ▒▒ ░  ░      ░  ░ ▒ ▒░         ')
-print(f'{Style.BRIGHT}{Fore.BLUE}    ░   ▒     ░ ░    ░   ▒  ░      ░   ░ ░ ░ ▒          ')
-print(f'{Style.BRIGHT}{Fore.BLUE}        ░  ░    ░        ░         ░       ░ ░          ', Style.RESET_ALL)
+#print(f'{Style.BRIGHT}{Fore.BLUE}   ▄▄▄       ██▓    ▄▄▄      ███▄ ▄███▓  ▒████         ')
+#print(f'{Style.BRIGHT}{Fore.BLUE}  ▒████▄    ▓██▒   ▒████▄   ▓██▒▀█▀ ██▒▒██▒  ██▒      ')
+#print(f'{Style.BRIGHT}{Fore.BLUE}  ▒██  ▀█▄  ▒██░   ▒██  ▀█▄ ▓██    ▓██░▒██░  ██▒      ')
+#print(f'{Style.BRIGHT}{Fore.BLUE}  ░██▄▄▄▄██ ▒██░   ░██▄▄▄▄██▒██    ▒██ ▒██   ██░      ')
+#print(f'{Style.BRIGHT}{Fore.BLUE}   ▓█   ▓██▒░██████▒▓█   ▓██▒██▒   ░██▒░  ████▓▒░       ')
+#print(f'{Style.BRIGHT}{Fore.BLUE}   ▒▒   ▓▒█░░ ▒░▓  ░▒▒   ▓▒█░ ▒░   ░  ░░ ▒░▒░▒░        ')
+#print(f'{Style.BRIGHT}{Fore.BLUE}    ░   ▒▒ ░░ ░ ▒  ░ ░   ▒▒ ░  ░      ░  ░ ▒ ▒░         ')
+#print(f'{Style.BRIGHT}{Fore.BLUE}    ░   ▒     ░ ░    ░   ▒  ░      ░   ░ ░ ░ ▒          ')
+#print(f'{Style.BRIGHT}{Fore.BLUE}        ░  ░    ░        ░         ░       ░ ░          ', Style.RESET_ALL)
 
-
+time.sleep(1)
 print(f"\n")
 print(f"[{Fore.RED}Alamo{Style.RESET_ALL}] {Fore.GREEN}Select a number from 1 - 6 to continue{Style.RESET_ALL}")
 print(f"[{Fore.GREEN}1{Style.RESET_ALL}] {Fore.CYAN}Start{Style.RESET_ALL}")

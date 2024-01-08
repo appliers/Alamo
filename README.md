@@ -1,7 +1,9 @@
 
 # Alamo | DEPRECATED 
 
-Alamo v1, v2, and v3 do NOT work and therefore are deprecated until further notice (1/7/24).
+#### Alamo v1, v2, and v3 do NOT work and therefore are deprecated until further notice (1/7/24).
+
+------------------------------------------------------------------------------------------------------------------------------
 
 Alamo is a piece of software written in Python and is used to send spam login requests to a website. It is intended for use on scammers' websites.
 <br><br>
